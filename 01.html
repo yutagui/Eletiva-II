@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto" />
+    <input type="button" onclick="validar()" value="Clique"/>
+    <br/>
+    <div id="caixa" style="background: green; 
+                            width: 150px; 
+                            height:150px;">
+    </div>
+
+    <script>
+        function validar()
+        {
+            console.log("1")
+
+            var valor_text = document.getElementById("texto").value
+
+            if (valor_text == "") {
+                alert("Você precisa digitar uma cor")
+            }
+            else {
+                //document.getElementById("caixa").style.background = valor_text
+                //document.getElementById("caixa").innerHTML = valor_text
+
+                var caixa = document.getElementById("caixa")
+                caixa.style.background = valor_text
+                caixa.innerHTML = valor_text
+            }
+
+            console.log("saiu")
+
+            //"1" == 1 verdadeiro
+            //"1" === 1 falso
+        }
+    </script>
+</body>
+</html>
