@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Placa</label>
+    <input type="text" id="placa"/>
+    <label>Modelo</label>
+    <input type="text" id="modelo"/>
+    <label>Ano fabricação</label>
+    <input type="text" id="ano"/>
+    <input type="button" value="Cadastrar" onclick="cadastrar()"/>
+
+    <table id="estoque">
+        <tr style="background: #ccc; font-weight: bold;">
+            <td onclick="emprestar(this)">⬇️</td>
+            <td>Placa</td>
+            <td>Modelo</td>
+            <td>Ano Fabricação</td>
+        </tr></table>
+
+    <table id="alugado">
+        <tr style="background: #ccc; font-weight: bold;">
+            <td>⬆️</td>
+            <td>Placa</td>
+            <td>Modelo</td>
+            <td>Ano Fabricação</td>
+        </tr>
+    </table>
+
+    <script>
+        function cadastrar(){
+            var placa = document.getElementById("placa")
+            var modelo = document.getElementById("modelo")
+            var ano = document.getElementById("ano")
+            var tabela = document.getElementById("estoque")
+
+            var novaLinha = tabela.insertRow(-1)
+            var cell0 = novaLinha.insertCell(0)
+            var cell1 = novaLinha.insertCell(1)
+            var cell2 = novaLinha.insertCell(2)
+            var cell3 = novaLinha.insertCell(3)
+
+            cell0.innerHTML = "⬇️"
+            cell1.innerHTML = placa.value
+            cell2.innerHTML = modelo.value
+            cell3.innerHTML = ano.value
+
+            placa.value = ""
+            modelo.value = ""
+            ano.value = ""
+        }
+
+        function emprestar(item){
+            var tabela = item.parentNode.parentNode
+            var filhos = tabela.childNodes
+            var conta_filhos = filhos.length
+            var tabela2 = document.getElementById("alugado")
+
+            for(var i = 1; i < conta_filhos; i++){
+                tabela2.append(filhos[i])
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
