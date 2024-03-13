@@ -20,11 +20,12 @@
             <td>Placa</td>
             <td>Modelo</td>
             <td>Ano Fabricação</td>
-        </tr></table>
+        </tr>
+    </table>
 
     <table id="alugado">
         <tr style="background: #ccc; font-weight: bold;">
-            <td>⬆️</td>
+            <td onclick="emp_filho_cima(this)">⬆️</td>
             <td>Placa</td>
             <td>Modelo</td>
             <td>Ano Fabricação</td>
@@ -49,6 +50,8 @@
             cell2.innerHTML = modelo.value
             cell3.innerHTML = ano.value
 
+            cell0.onclick = function() {emp_filho(this)}
+
             placa.value = ""
             modelo.value = ""
             ano.value = ""
@@ -61,8 +64,38 @@
             var tabela2 = document.getElementById("alugado")
 
             for(var i = 1; i < conta_filhos; i++){
+                console.log(filhos)
+                if(filhos[i].nodeName != '#text')
                 tabela2.append(filhos[i])
             }
+        }
+
+        function emprestar_cima(item){
+            var tabela = item.parentNode.parentNode
+            var filhos = tabela.childNodes
+            var conta_filhos = filhos.length
+            var tabela3 = document.getElementById("estoque")
+
+            for(var i = 1; i < conta_filhos; i++){
+                console.log(filhos)
+                if(filhos[i].nodeName != '#text')
+                tabela3.append(filhos[i])
+            }
+        }
+
+        function emp_filho(filho){
+            var linha = filho.parentNode
+            var tabela2 = document.getElementById("alugado")
+            console.log(linha)
+            tabela2.append(linha) 
+        }
+
+        
+        function emp_filho_cima(filho){
+            var linha = filho.parentNode
+            var tabela2 = document.getElementById("estoque")
+            console.log(linha)
+            tabela2.append(linha)
         }
     </script>
 
