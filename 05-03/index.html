@@ -92,10 +92,17 @@
 
         
         function emp_filho_cima(filho){
-            var linha = filho.parentNode
+            var linha = filho.childNodes
+            var conta_filhos = linha.length
             var tabela2 = document.getElementById("estoque")
             console.log(linha)
             tabela2.append(linha)
+
+            for(var i = 1; i < conta_filhos; i++){
+                console.log(filhos)
+                if(linha[i] != '#text')
+                tabela2.append(linha[i])
+            }
         }
     </script>
 
