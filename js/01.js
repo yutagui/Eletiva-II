@@ -5,7 +5,7 @@ $(document).ready(function(){
         
         $.get(url)
             .then(function(retorno) {
-                console.log(retorno)
+                console.log(retorno.logradouro)
             })
             .catch(function(error){
                 console.log(error)
