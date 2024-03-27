@@ -1,0 +1,32 @@
+@font-face {
+    font-family: UFO;
+    src: url("SFAlienEncounters.ttf")
+}
+
+body{
+    margin: 0px;
+    background-image: url("../img/fundo.gif");
+    font-family: 'UFO';
+} 
+
+#fundo{
+    margin: 0px;
+    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+}
+
+#area_jogo{
+    background: url("../img/fundo.png");
+    width: 680px;
+    height: 350px;  
+}
+
+#alerta{
+    display: none;
+    text-align: center;
+    background-color: white;
+    width: 350px;
+    height: 250px;
+    margin-left: 150px;
+}
