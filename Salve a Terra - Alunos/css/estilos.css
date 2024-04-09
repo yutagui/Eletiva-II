@@ -30,3 +30,367 @@ body{
     height: 250px;
     margin-left: 150px;
 }
+
+/************************PLAYER************************/
+#player{
+    width: 110px;
+    height: 60px;
+    position: absolute;
+    background-image: url("../img/jogador.png");
+
+    animation: p_player .9s steps(7) infinite;
+    -webkit-animation: p_player .9s steps(7) infinite;
+    -moz-animation: p_player .9s steps(7) infinite;
+    -ms-animation: p_player .9s steps(7) infinite;
+    -o-animation: p_player .9s steps(7) infinite;
+}
+
+@keyframes p_player{
+    from { background-position: 0px;}
+    to { background-position: -762px;}
+}
+
+@-webkit-keyframes p_player{
+    from { background-position: 0px;}
+    to { background-position: -762px;}
+}
+
+@-moz-keyframes p_player{
+    from { background-position: 0px;}
+    to { background-position: -762px;}
+}
+
+@-ms-keyframes p_player{
+    from { background-position: 0px;}
+    to { background-position: -762px;}
+}
+
+@-o-keyframes p_player{
+    from { background-position: 0px;}
+    to { background-position: -762px;}
+}
+
+/************************TANQUE************************/
+#tanque{
+    width: 77px;
+    height: 50px;
+    position: absolute;
+    background-image: url("../img/tanque.png");
+    top: 280px;
+    left: 300px;
+
+    animation: p_tanque .9s steps(5) infinite;
+    -webkit-animation: p_tanque .9s steps(5) infinite;
+    -moz-animation: p_tanque .9s steps(5) infinite;
+    -ms-animation: p_tanque .9s steps(5) infinite;
+    -o-animation: p_tanque .9s steps(5) infinite;
+}
+
+@keyframes p_tanque{
+    from { background-position: 0px;}
+    to { background-position: -380px;}
+}
+
+@-webkit-keyframes p_tanque{
+    from { background-position: 0px;}
+    to { background-position: -380px;}
+}
+
+@-moz-keyframes p_tanque{
+    from { background-position: 0px;}
+    to { background-position: -380px;}
+}
+
+@-ms-keyframes p_tanque{
+    from { background-position: 0px;}
+    to { background-position: -380px;}
+}
+
+@-o-keyframes p_tanque{
+    from { background-position: 0px;}
+    to { background-position: -380px;}
+}
+
+/************************DILMA************************/
+#pessoa{
+    width: 31px;
+    height: 50px;
+    position: absolute;
+    background-image: url("../img/pessoa.png");
+    top: 280px;
+    left: 100px;
+
+    animation: p_pessoa .9s steps(12) infinite;
+    -webkit-animation: p_pessoa .9s steps(12) infinite;
+    -moz-animation: p_pessoa .9s steps(12) infinite;
+    -ms-animation: p_pessoa .9s steps(12) infinite;
+    -o-animation: p_pessoa .9s steps(12) infinite;
+}
+
+@keyframes p_pessoa{
+    from { background-position: 0px;}
+    to { background-position: -379px;}
+}
+
+@-webkit-keyframes p_pessoa{
+    from { background-position: 0px;}
+    to { background-position: -378px;}
+}
+
+@-moz-keyframes p_pessoa{
+    from { background-position: 0px;}
+    to { background-position: -378px;}
+}
+
+@-ms-keyframes p_pessoa{
+    from { background-position: 0px;}
+    to { background-position: -378px;}
+}
+
+@-o-keyframes p_pessoa{
+    from { background-position: 0px;}
+    to { background-position: -378px;}
+}
+
+/************************INIMIGO************************/
+#inimigo{
+    width: 51px;
+    height: 48px;
+    position: absolute;
+    background-image: url("../img/inimigo.png");
+    top: 150px;
+    left: 250px;
+
+    animation: p_inimigo .9s steps(12) infinite;
+    -webkit-animation: p_inimigo .9s steps(12) infinite;
+    -moz-animation: p_inimigo .9s steps(12) infinite;
+    -ms-animation: p_inimigo .9s steps(12) infinite;
+    -o-animation: p_inimigo .9s steps(12) infinite;
+}
+
+@keyframes p_inimigo{
+    from { background-position: 0px;}
+    to { background-position: -600px;}
+}
+
+@-webkit-keyframes p_inimigo{
+    from { background-position: 0px;}
+    to { background-position: -600px;}
+}
+
+@-moz-keyframes p_inimigo{
+    from { background-position: 0px;}
+    to { background-position: -600px;}
+}
+
+@-ms-keyframes p_inimigo{
+    from { background-position: 0px;}
+    to { background-position: -600px;}
+}
+
+@-o-keyframes p_inimigo{
+    from { background-position: 0px;}
+    to { background-position: -600px;}
+}
+
+/************************EXPLOSAO************************/
+#explosao{
+    width: 64px;
+    height: 59px;
+    position: absolute;
+    background-image: url("../img/explosao.png");
+
+    animation: p_explosao .9s steps(4) infinite;
+    -webkit-animation: p_explosao .9s steps(4) infinite;
+    -moz-animation: p_explosao .9s steps(4) infinite;
+    -ms-animation: p_explosao .9s steps(4) infinite;
+    -o-animation: p_explosao .9s steps(4) infinite;
+}
+
+@keyframes p_explosao{
+    from { background-position: 0px;}
+    to { background-position: -253px;}
+}
+
+@-webkit-keyframes p_explosao{
+    from { background-position: 0px;}
+    to { background-position: -253px;}
+}
+
+@-moz-keyframes p_explosao{
+    from { background-position: 0px;}
+    to { background-position: -253px;}
+}
+
+@-ms-keyframes p_explosao{
+    from { background-position: 0px;}
+    to { background-position: -253px;}
+}
+
+@-o-keyframes p_explosao{
+    from { background-position: 0px;}
+    to { background-position: -253px;}
+}
+
+/************************INIMIGO EXPLOSAO************************/
+#inimigo_explosao{
+    width: 49px;
+    height: 48px;
+    position: absolute;
+    background-image: url("../img/inimigo_explode.png");
+    top: 150px;
+    left: 300px;
+
+    animation: p_inimigo_explosao .9s steps(4) infinite;
+    -webkit-animation: p_inimigo_explosao .9s steps(4) infinite;
+    -moz-animation: p_inimigo_explosao .9s steps(4) infinite;
+    -ms-animation: p_inimigo_explosao .9s steps(4) infinite;
+    -o-animation: p_inimigo_explosao .9s steps(4) infinite;
+}
+
+@keyframes p_inimigo_explosao{
+    from { background-position: 0px;}
+    to { background-position: -191px;}
+}
+
+@-webkit-keyframes p_inimigo_explosao{
+    from { background-position: 0px;}
+    to { background-position: -191px;}
+}
+
+@-moz-keyframes p_inimigo_explosao{
+    from { background-position: 0px;}
+    to { background-position: -191px;}
+}
+
+@-ms-keyframes p_inimigo_explosao{
+    from { background-position: 0px;}
+    to { background-position: -191px;}
+}
+
+@-o-keyframes p_inimigo_explosao{
+    from { background-position: 0px;}
+    to { background-position: -191px;}
+}
+
+/************************INIMIGO TIRO************************/
+#inimigo_tiro{
+    width: 34px;
+    height: 47px;
+    position: absolute;
+    background-image: url("../img/inimigo_tiro.png");
+    top: 250px;
+    left: 300px;
+
+    animation: p_inimigo_tiro .9s steps(5) infinite;
+    -webkit-animation: p_inimigo_tiro .9s steps(5) infinite;
+    -moz-animation: p_inimigo_tiro .9s steps(5) infinite;
+    -ms-animation: p_inimigo_tiro .9s steps(5) infinite;
+    -o-animation: p_inimigo_tiro .9s steps(5) infinite;
+}
+
+@keyframes p_inimigo_tiro{
+    from { background-position: 0px;}
+    to { background-position: -164px;}
+}
+
+@-webkit-keyframes p_inimigo_tiro{
+    from { background-position: 0px;}
+    to { background-position: -164px;}
+}
+
+@-moz-keyframes p_inimigo_tiro{
+    from { background-position: 0px;}
+    to { background-position: -164px;}
+}
+
+@-ms-keyframes p_inimigo_tiro{
+    from { background-position: 0px;}
+    to { background-position: -164px;}
+}
+
+@-o-keyframes p_inimigo_tiro{
+    from { background-position: 0px;}
+    to { background-position: -164px;}
+}
+
+/************************JOGADOR EXPLOSAO************************/
+#jogador_explosao{
+    width: 103px;
+    height: 58px;
+    position: absolute;
+    background-image: url("../img/jogador_explode.png");
+    left:200px;
+
+    animation: p_jogador_explosao .9s steps(3) infinite;
+    -webkit-animation: p_jogador_explosao .9s steps(3) infinite;
+    -moz-animation: p_jogador_explosao .9s steps(3) infinite;
+    -ms-animation: p_jogador_explosao .9s steps(3) infinite;
+    -o-animation: p_jogador_explosao .9s steps(3) infinite;
+}
+
+@keyframes p_jogador_explosao{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+@-webkit-keyframes p_jogador_explosao{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+@-moz-keyframes p_jogador_explosao{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+@-ms-keyframes p_jogador_explosao{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+@-o-keyframes p_jogador_explosao{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+/************************TIRO************************/
+#tiro{
+    width: 41px;
+    height: 26px;
+    position: absolute;
+    background-image: url("../img/tiro.png");
+    top:250px;
+    left:200px;
+
+    animation: p_tiro .9s steps(1) infinite;
+    -webkit-animation: p_tiro .9s steps(1) infinite;
+    -moz-animation: p_tiro .9s steps(1) infinite;
+    -ms-animation: p_tiro .9s steps(1) infinite;
+    -o-animation: p_tiro .9s steps(1) infinite;
+}
+
+@keyframes p_tiro{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+@-webkit-keyframes p_tiro{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+@-moz-keyframes p_tiro{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+@-ms-keyframes p_tiro{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
+
+@-o-keyframes p_tiro{
+    from { background-position: 0px;}
+    to { background-position: -307px;}
+}
