@@ -35,6 +35,8 @@ body{
 #player{
     width: 110px;
     height: 60px;
+    top: 50px;
+    left: 50px;
     position: absolute;
     background-image: url("../img/jogador.png");
 
