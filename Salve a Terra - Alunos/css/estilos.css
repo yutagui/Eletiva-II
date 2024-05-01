@@ -38,6 +38,7 @@ body{
     top: 50px;
     left: 50px;
     position: absolute;
+    z-index: 99;
     background-image: url("../img/jogador.png");
 
     animation: p_player .9s steps(7) infinite;
@@ -395,4 +396,14 @@ body{
 @-o-keyframes p_tiro{
     from { background-position: 0px;}
     to { background-position: -307px;}
+}
+
+#vida {
+    background-image: url("../img/vida.png");
+    background-position: 0px 52px;
+    height: 52px;
+    width: 118px;
+    position: absolute;
+    left: 5px;
+    z-index: 98
 }
