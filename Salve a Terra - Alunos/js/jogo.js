@@ -1,3 +1,23 @@
+var f_nave = 100
+var f_tanque = 150
+var f_pessoa = 50
+var pontos = 0
+var vel = 5 
+var fase = 1000
+var pontosAnterior = 0
+
+//OBJETO
+// var game_metodo = {
+//     f_nave: 100,
+//     f_tanque: 150,
+//     pontos: 0
+// }
+
+// game_metodo.pontos += game_metodo.f_nave
+
+// pontos += f_pessoa
+// pontos -= f_pessoa * 1.10
+
 var somjogo = document.getElementById("somjogo")
 var tironave = document.getElementById("tironave")
 
@@ -30,28 +50,28 @@ function movimenta_player(){
         pos_top = parseInt(pos_top)
 
         if(pos_top >= 10)
-            $('#player').css("top", pos_top - 10)
+            $('#player').css("top", pos_top - vel)
     }
     if (jogo.pressionou[teclas.S]){
         var pos_down = $('#player').css("top")
         pos_down = parseInt(pos_down)
 
         if(pos_down <= 270)
-            $('#player').css("top", pos_down + 5)
+            $('#player').css("top", pos_down + vel)
     }
     if (jogo.pressionou[teclas.A]){
         var pos_left = $('#player').css("left")
         pos_left = parseInt(pos_left)
 
         if(pos_left >= 10)
-            $('#player').css("left", pos_left - 5)
+            $('#player').css("left", pos_left - vel)
     }
     if (jogo.pressionou[teclas.D]){
         var pos_right = $('#player').css("left")
         pos_right = parseInt(pos_right)
 
         if(pos_right <= 560)
-            $('#player').css("left", pos_right + 5)
+            $('#player').css("left", pos_right + vel)
     }
     if(jogo.pressionou[teclas.SPACE]){
         tiro()
@@ -61,13 +81,14 @@ function movimenta_player(){
         pos_down = parseInt(pos_down)
 
         if(pos_down <= 270)
-            $('#player').css("top", pos_down + 5)
+            $('#player').css("top", pos_down + vel)
     }
 }
 
 function movimenta_cenario(){
-    var posicao = parseInt($('#area_jogo').css("background-position"))
-    $('#area_jogo').css("background-position" , posicao - 1)    
+    let area_jogo = $('#area_jogo')
+    let posicao = parseInt($('#area_jogo').css("background-position"))
+    $('#area_jogo').css("background-position" , posicao - (vel + 5))    
 }
 
 
@@ -77,7 +98,7 @@ function remove_inimigo(){
     posicao_inimigo = parseInt(posicao_inimigo)
 
     if(posicao_inimigo <= 700){
-        $('#inimigo').css("left", posicao_inimigo - 5)
+        $('#inimigo').css("left", posicao_inimigo - vel)
     }
 
     if(posicao_inimigo == 0){
@@ -88,15 +109,15 @@ function remove_inimigo(){
         }, 1000)
     }
         
-}         
+}  
 
 function tiro(){
     if($('#tiro').length == 0){
         var p_y = parseInt($('#player').css('top'))
         var p_x = parseInt($('#player').css('left'))
         $('#area_jogo').append('<div id="tiro"></div>');
-        $('#tiro').css('top', p_y + 20)
-        $('#tiro').css('left', p_x + 70)
+        $('#tiro').css('top', p_y + (vel + 15))
+        $('#tiro').css('left', p_x + (vel + 65))
         tironave.play()
     }
 }
@@ -105,7 +126,7 @@ function movimenta_tiro(){
     if($('#tiro').length > 0){
         var tiro_x = parseInt($('#tiro').css('left'))
 
-        $('#tiro').css('left', tiro_x + 8)
+        $('#tiro').css('left', tiro_x + (vel + 3))
 
         if(tiro_x >= 620)
             $('#tiro').remove()
@@ -129,6 +150,7 @@ function colisao(){
         setTimeout(function (){
             $('#inimigo_explosao').remove()
         }, 2000)
+        pontos += f_nave
     }
 
     if(p_atinge_inimigo.length > 0) {
@@ -169,6 +191,21 @@ function diminuiVidaPlayer(){
     $('#vida').css("background-position", "0px 52px")
 }
 
+function valida_pontuacao (){
+    if (pontos > 0){
+        var faseAtual = Math.floor(pontos / fase)
+        var faseAnt = Math.floor(pontosAnterior / fase )
+
+        if(faseAtual > faseAnt) {
+            vel += 1
+            console.log(vel)
+        }
+
+        pontosAnterior = pontos
+        $('#pontos').innerHTML = pontos
+    }
+}
+
 function loop() {
     somjogo.addEventListener ("ended", function (){
         somjogo.currentTime = 0
@@ -181,6 +218,7 @@ function loop() {
     remove_inimigo()
     movimenta_tiro()
     colisao()
+    valida_pontuacao()
 }
     
 
@@ -209,6 +247,8 @@ function start() {
     $('#area_jogo').append('<div id="inimigo_tiro"></div>')
 
     $('#area_jogo').append('<div id="jogador_explosao"></div>')
+
+    $('#area_jogo').append('<div id="pontos"></div>')
 
 
 }
